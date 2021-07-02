@@ -1,0 +1,143 @@
+1. Describe how can you secure this endpoint using Spring Security using Oauth2.
+We can secure the endpoint by giving a username and password for a user. To protect the password, we can add a starter dependency on Spring Security. The authentication requests via an incoming Oauth2 can be done by @EnableResourceServer which enables a Spring Security.
+
+2. Describe how can you document this API for the consumers of this API?
+The consumers will use the following web service to retrieve the customer information from the Book Info.
+
+a. Getting all the list of Books.
+Local link: https://localhost:8080/book
+Response Parameters
+
+HTTP Status: 200-OK 
+Parameter: BookInfo 
+Data Type: Object
+Required: Yes
+Desc: Book data
+
+HTTP Status: 200-OK 
+Parameter: ISBN
+Data Type: String
+Required: Yes
+Desc: ISBN number of the book
+
+HTTP Status: 200-OK 
+Parameter: Title
+Data Type: String
+Required: Yes
+Desc: Title of the book
+
+HTTP Status: 200-OK 
+Parameter: Author
+Data Type: String
+Required: Yes
+Desc: Author of the Book
+
+HTTP Status: 200-OK 
+Parameter: Date
+Data Type: Date
+Required: Yes
+Desc: Published date of the book
+
+HTTP Status: 200-OK 
+Parameter: Rating
+Data Type: Integer
+Required: Yes
+Desc: Rating for the book
+
+Error Messages:
+Internal error has occurred.
+
+
+a. Getting the list of Books by ID.
+Local link: https://localhost:8080/book/iSBN
+
+URL Parameters:
+
+Parameter: ISBN
+Data type: String
+Required: Yes
+Desc: ISBN of the book.
+
+Response Parameters
+
+HTTP Status: 200-OK 
+Parameter: ISBN
+Data Type: String
+Required: Yes
+Desc: ISBN number of the book
+
+HTTP Status: 200-OK 
+Parameter: Title
+Data Type: String
+Required: Yes
+Desc: Title of the book
+
+HTTP Status: 200-OK 
+Parameter: Author
+Data Type: String
+Required: Yes
+Desc: Author of the Book
+
+HTTP Status: 200-OK 
+Parameter: Date
+Data Type: Date
+Required: Yes
+Desc: Published date of the
+
+HTTP Status: 200-OK 
+Parameter: Rating
+Data Type: Integer
+Required: Yes
+Desc: Rating for the book
+
+Error Messages:
+Internal error has occurred.
+
+c. Create a Book in the inventory
+Local link: https://localhost:8080/book
+
+Response Parameters
+
+HTTP Status: 200-OK 
+Parameter: BookInfo 
+Data Type: Object
+Required: Yes
+Desc: Book data will be created
+
+HTTP Status: 200-OK 
+Parameter: ISBN
+Data Type: String
+Required: Yes
+Desc: ISBN number of the book will be created
+
+HTTP Status: 200-OK 
+Parameter: Title
+Data Type: String
+Required: Yes
+Desc: Title of the book will be created
+
+HTTP Status: 200-OK 
+Parameter: Author
+Data Type: String
+Required: Yes
+Desc: Author of the Book will be created
+
+HTTP Status: 200-OK 
+Parameter: Date
+Data Type: Date
+Required: Yes
+Desc: Published date of the book will be created
+
+HTTP Status: 200-OK 
+Parameter: Rating
+Data Type: Integer
+Required: Yes
+Desc: Rating for the book will be created
+
+Error Messages:
+Internal error has occurred.
+
+
+3. Describe any design pattern you have levaraged in your solution.
+Similar to Spring MVC design pattern. 
+
